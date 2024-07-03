@@ -39,3 +39,8 @@ build --enable_platform_specific_config
 build:macos --apple_crosstool_top=@local_config_apple_cc//:toolchain
 build:macos --crosstool_top=@local_config_apple_cc//:toolchain
 build:macos --host_crosstool_top=@local_config_apple_cc//:toolchain
+
+## Replace these with the bazelrc config from app.nativelink.com in the Quickstart to use NativeLink
+# build --remote_cache=grpcs://cas-[YOUR_NAME_HERE].build-faster.nativelink.net
+# build --remote_header=x-nativelink-api-key=[YOU_NATIVELINK_API_KEY]
+# build --remote_timeout=600

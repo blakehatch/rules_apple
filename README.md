@@ -3,6 +3,23 @@
 This repository contains rules for [Bazel](https://bazel.build) that can be
 used to bundle applications for Apple platforms.
 
+# Building with NativeLink
+
+The Bazel builds for these apple projects can greatly benefit in efficiency and development cycles by using NativeLink for remote caching and execution.
+
+We have also added the [visionOS-example](https://github.com/IvanCampos/visionOS-examples) from Ivan Campos in order to highlight the value of the tool in building software that utilizes apples new custom AI chips.
+
+> [!WARNING]
+> - **The visionOS, iOS, and other simulators must be installed in the platforms section of your XCode settings before proceeding.**
+>
+> ![visionOS & iOS platforms](https://developer.apple.com/documentation/xcode/installing-additional-simulator-runtimes)
+>
+> - The client build request must be done from macOS or else it won't work.
+
+
+
+## Rules Overview
+
 These rules handle the linking and bundling of applications and extensions
 (that is, the formation of an `.app` with an executable and resources,
 archived in an `.ipa`). Compilation is still performed by the existing
